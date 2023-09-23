@@ -12,4 +12,11 @@ pipeline {
             }
         }
     }
+
+    stage('Check Yarn Version') {
+    steps {
+        sh 'yarn --version'
+    }
+}
+
 }
