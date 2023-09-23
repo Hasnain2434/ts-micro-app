@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+stage('Check Yarn Version') {
+    steps {
+        sh 'yarn --version'
+    }
+
         stage('Install Dependencies') {
             steps {
                 // Checkout your source code from a Git repository if needed
@@ -12,10 +17,7 @@ pipeline {
             }
         }
 
-        stage('Check Yarn Version') {
-    steps {
-        sh 'yarn --version'
-    }
+        
 }
 
     }
