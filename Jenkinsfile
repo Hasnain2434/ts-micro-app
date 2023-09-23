@@ -2,10 +2,11 @@ pipeline {
     agent any
 
     stages {
-stage('Check Yarn Version') {
-    steps {
-        sh 'yarn --version'
-    }
+        stage('Check Yarn Version') {
+            steps {
+                sh 'yarn --version'
+            }
+        }
 
         stage('Install Dependencies') {
             steps {
@@ -16,11 +17,5 @@ stage('Check Yarn Version') {
                 sh 'yarn install'
             }
         }
-
-        
-}
-
     }
-
-    
 }
