@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Prepare') {
+        stage('Install Dependencies') {
             steps {
-                script {
-                    sh "yarn install"
-                }
+                // Checkout your source code from a Git repository if needed
+                // git branch: 'your-branch', url: 'your-git-repo-url'
+
+                // Run 'yarn install'
+                sh 'yarn install'
             }
         }
-        // Other stages go here
     }
-    // Post-build actions and other configuration go here
 }
